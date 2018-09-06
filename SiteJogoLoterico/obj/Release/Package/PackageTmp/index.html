@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>LoteriasDemo - Apostar</title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="Content/loteria.css" rel="stylesheet" />
+</head>
+<body class="container" ng-app="appModule">
+
+    <div ng-controller="apostarCtrl" class="row">
+        <div class="fundo_bilhete">
+
+            <h1 class="h1">Realizar Apostas</h1>
+
+            Escolha a quantidade de números:
+            <input ng-repeat="NA in qtdNumerosAposta" ng-class="limiteQtdSelecionada==NA? 'jogoHabilitado' : 'jogo'" maxlength="2" ng-model="NA" ng-click="selecionaQtd(NA)" readonly />
+
+
+            <div id="montaJogo" class="fundo_bilhete tab-pane">
+                Escolha os números para sua aposta:
+                <input ng-repeat="t in bolasRepete" class="jogo" value="" maxlength="2" ng-model="bolas[t]" />
+
+                <div>
+                    <button id="btnIncluir" type="button" class="botaoAzul"
+                            title="Incluir Aposta" tabindex="6650" ng-click="incluiAposta()">
+                        <span>
+                            Incluir Aposta
+                        </span>
+                    </button>
+
+                    <button id="btnIncluirS" type="button" class="botaoAzul"
+                            title="Incluir Surpresinha" tabindex="6650" ng-click="incluiSurpresinha()">
+                        <span>
+                            Incluir Surpresinha
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div ng-repeat="a in apostasRealizadas">
+                <div class="tabelaLoteria">
+                    <div class="cabecalhoSorteado espacoCanto" aria-level="2" role="heading">
+                        <span ng-bind="a.idAposta"></span>
+                        <span class="tipoAposta">
+                            <span ng-bind="a.tipo"></span>
+                        </span><span class="tipoConcurso">
+                            <span ng-bind="'Concurso '+(a.idConcurso)+' ('+(a.dataHoraFormatada)+')'"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="bola" ng-repeat="n in a.numeros" style="color:#fff;background-color:{{a.corConcurso}}"> {{n}}</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div ng-controller="sorteioCtrl" class="row">
+        <div class="fundo_bilhete">
+
+            <h1 class="h1">Realizar Sorteio</h1>
+
+            <span id="tabelaQtd"> </span>
+            Escolha os números para sua aposta:
+            <div id="montaJogo" class="fundo_bilhete">
+                <button id="btnIncluirS" type="button" class="botaoAzul"
+                        title="Sortear" tabindex="6650" ng-click="sortear()">
+                    <span>
+                        Sortear
+                    </span>
+                </button>
+            </div>
+
+            <div ng-repeat="s in numerosSorteados">
+                <div class="tabelaLoteria">
+                    <div class="cabecalhoSorteado espacoCanto" aria-level="2" role="heading">
+                        <span ng-bind="s.idAposta"></span>
+                        <span class="tipoAposta">
+                            <span ng-bind="s.tipo"></span>
+                        </span><span class="tipoConcurso">
+                            <span ng-bind="'Concurso '+(s.idConcurso)+' ('+(s.dataHoraFormatada)+')'"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="bola" ng-repeat="q in s.numeros"
+                     style="color:#fff;background-color:{{s.corConcurso}}">{{q}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-controller="listarCtrl" class="row">
+        <div class="fundo_bilhete">
+
+            <h1 class="h1">Apostas Realizadas (Serviço)</h1>
+
+            Atualmente com exemplo de apostas:
+
+            <div ng-repeat="l in apostasListadas">
+                <div class="tabelaLoteria">
+                    <div class="cabecalhoSorteado espacoCanto" aria-level="2" role="heading">
+                        <span ng-bind="l.idAposta"></span>
+                        <span class="tipoAposta">
+                            <span ng-bind="l.tipo"></span>
+                        </span><span class="tipoConcurso">
+                            <span ng-bind="'Concurso '+(l.idConcurso)+' ('+(l.dataHoraFormatada)+')'"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="bola" ng-repeat="m in l.numeros" style="color:#fff;background-color:{{l.corConcurso}}"> {{m}}</div>
+            </div>
+
+        </div>
+    </div>
+
+        <script src="Scripts/jquery-3.0.0.min.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/angular.min.js"></script>
+        <script src="Scripts/angular-route.min.js"></script>
+
+        <!----Controllers da Aplicação -->
+        <script src="app/global/module.js"></script>
+        <script src="app/aposta/invokerApostas.js"></script>
+        <script src="app/aposta/apostarCtrl.js"></script>
+        <script src="app/aposta/sorteioCtrl.js"></script>
+        <script src="app/aposta/listarCtrl.js"></script>
+
+</body>
+</html>
