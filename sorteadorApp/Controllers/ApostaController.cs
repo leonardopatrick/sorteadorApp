@@ -12,21 +12,14 @@ namespace sorteadorApp.Controllers
     [RoutePrefix("api/JogoLoterico")]
     public class ApostaController : ApiController
     {
-        List<Aposta> apostas = new List<Aposta>();
-       // List<TesteAposta> testeAposta = new List<TesteAposta>();
+       private static List<Aposta> apostas = new List<Aposta>();
+       private List<Aposta> apostaSorteada = new List<Aposta>();
 
         [Route("getApostas")]
         public List<Aposta> getApostas()
         {
-                geraApostaSurpresinha(1);
-             geraApostaSurpresinha(2);
-             geraApostaSurpresinha(1,8);
-             geraApostaSurpresinha(1,9);
-             todasApostas();
-
-            
-
-            //apostas.Add(teste);
+            geraApostaSurpresinha(1, 2);
+            todasApostas();
             return apostas;
         }
 
@@ -35,8 +28,15 @@ namespace sorteadorApp.Controllers
         public List<Aposta> geraSuprersinha([FromBody] Aposta aposta)
         {
             geraApostaSurpresinha(aposta.idConcurso, aposta.qtdNumeros);
-            todasApostas();
 
+            return apostas;
+        }
+
+        [Route("sorteio")]
+        [HttpPost]
+        public List<Aposta> sorteio([FromBody] Aposta aposta)
+        {
+            geraApostaSurpresinha(aposta.idConcurso, aposta.qtdNumeros);
             return apostas;
         }
 
@@ -44,20 +44,16 @@ namespace sorteadorApp.Controllers
         [HttpPost]
         public List<Aposta> addAposta([FromBody] Aposta aposta)
         {
-            //int idConcurso = 1;
             apostas.Add(aposta);
- 
-            todasApostas();
-
-
             return apostas;
         }
 
         [Route("sorteiaNumeros")]
         [HttpPost]
-        public List<int> sorteiaNumeros([FromBody] Aposta aposta)
+        public List<Aposta> sorteiaNumeros([FromBody] Aposta aposta)
         {
-            return SorteioUtils.novoSorteio(getConcurso(aposta.idConcurso));
+            geraSorteio(aposta.idConcurso, aposta.qtdNumeros);
+            return apostaSorteada;
         }
 
         public Concurso getConcurso(int idConcurso)
@@ -107,7 +103,16 @@ namespace sorteadorApp.Controllers
 
         public void geraApostaSurpresinha(int idConcurso, int qtdNumeros)
         {
+           
             SorteioUtils.geraNrosSurpresinha(getConcurso(idConcurso), qtdNumeros, apostas);
         }
+
+        public void geraSorteio(int idConcurso, int qtdNumeros)
+        {
+
+            SorteioUtils.geraNrosSurpresinha(getConcurso(idConcurso), qtdNumeros, apostaSorteada);
+        }
+
+
     }
 }
