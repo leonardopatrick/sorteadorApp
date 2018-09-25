@@ -107,28 +107,23 @@ namespace sorteadorApp.Controllers
                 {
                     if (numerosSorteados.Contains(n))
                     {
+                        if(!i.Contains(n))
                         j++;
                     };
 
                 }
-                if(!i.Contains(j))
-                i.Add(j);
+              //  if(!i.Contains(j))
+               // i.Add(j);
 
-                if (j >= 6) { 
+                if (j == 6) { 
                     apostasGanhadoresSena.Add(aP.idAposta);
-                }
-
-                if (j == 5)
+                }else if (j == 5)
                 {
                         apostasGanhadoresQuina.Add(aP.idAposta);
-                }
-
-                if (j == 4)
+                }else if (j == 4)
                 {
                     apostasGanhadoresQuadra.Add(aP.idAposta);
-                }
-
-                if (j == 3)
+                } else if (j == 3)
                 {
                     apostasGanhadoresTerno.Add(aP.idAposta);
                 }

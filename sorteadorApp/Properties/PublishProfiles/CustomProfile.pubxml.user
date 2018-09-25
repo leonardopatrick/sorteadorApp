@@ -16,10 +16,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>02/22/2013 08:43:40</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>09/25/2018 11:44:03</publishTime>
+      <publishTime>09/25/2018 11:59:57</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>09/25/2018 11:44:02</publishTime>
+      <publishTime>09/25/2018 11:59:57</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 13:38:22</publishTime>
@@ -178,10 +178,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/sorteadorApp.dll">
-      <publishTime>09/25/2018 11:43:54</publishTime>
+      <publishTime>09/25/2018 11:59:50</publishTime>
     </File>
     <File Include="bin/sorteadorApp.pdb">
-      <publishTime>09/25/2018 11:43:54</publishTime>
+      <publishTime>09/25/2018 11:59:50</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>02/01/2018 13:17:18</publishTime>
@@ -241,7 +241,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>08/30/2018 22:37:39</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>09/25/2018 11:43:55</publishTime>
+      <publishTime>09/25/2018 11:59:52</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>08/30/2018 22:48:36</publishTime>

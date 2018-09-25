@@ -181,10 +181,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/SiteJogoLoterico.dll">
-      <publishTime>09/25/2018 11:42:40</publishTime>
+      <publishTime>09/25/2018 11:59:37</publishTime>
     </File>
     <File Include="bin/SiteJogoLoterico.pdb">
-      <publishTime>09/25/2018 11:42:40</publishTime>
+      <publishTime>09/25/2018 11:59:37</publishTime>
     </File>
     <File Include="Content/bootstrap-grid.css">
       <publishTime>09/02/2018 13:09:08</publishTime>
@@ -229,10 +229,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>09/03/2018 22:16:24</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>09/25/2018 11:42:31</publishTime>
+      <publishTime>09/25/2018 11:59:26</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>09/25/2018 11:42:42</publishTime>
+      <publishTime>09/25/2018 11:59:39</publishTime>
     </File>
     <File Include="Scripts/angular-animate.js">
       <publishTime>09/02/2018 13:07:08</publishTime>
