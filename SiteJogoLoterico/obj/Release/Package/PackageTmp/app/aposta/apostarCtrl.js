@@ -72,8 +72,6 @@
 
         $scope.conjuntoApostas.push(parametros); 
 
-       
-
         /*Valida seleção de bolas*/
         var existeRepetidos = false;
         var existeForaRange = false;

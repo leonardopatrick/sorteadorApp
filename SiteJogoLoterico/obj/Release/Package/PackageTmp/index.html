@@ -16,7 +16,8 @@
             <h1 class="h1">Realizar Apostas</h1>
 
             Escolha a quantidade de números:
-            <input ng-repeat="NA in qtdNumerosAposta" ng-class="limiteQtdSelecionada==NA? 'jogoHabilitado' : 'jogo'" maxlength="2" ng-model="NA" ng-click="selecionaQtd(NA)" readonly />
+            <input ng-repeat="NA in qtdNumerosAposta" ng-class="limiteQtdSelecionada==NA? 'jogoHabilitado' : 'jogo'"
+                   maxlength="2" ng-model="NA" ng-click="selecionaQtd(NA)" readonly />
 
 
             <div id="montaJogo" class="fundo_bilhete tab-pane">
@@ -66,9 +67,9 @@
             Escolha os números para sua aposta:
             <div id="montaJogo" class="fundo_bilhete">
                 <button id="btnIncluirS" type="button" class="botaoAzul"
-                        title="Sortear" tabindex="6650" ng-click="sortear()">
+                        title="Sortear 2" tabindex="6650" ng-click="sortear()">
                     <span>
-                        Sortear
+                        Sortear 2
                     </span>
                 </button>
             </div>
@@ -85,7 +86,18 @@
                     </div>
                 </div>
                 <div class="bola" ng-repeat="q in s.numeros"
-                     style="color:#fff;background-color:{{s.corConcurso}}">{{q}}</div>
+                     style="color:#fff; background-color:{{s.corConcurso}}">{{q}}</div>
+                Apostas Quadra
+                <div class="bola" ng-repeat="q in s.apostasGanhadorasQuadra"
+                     style="color:#fff; background-color:{{s.corConcurso}}">{{q}}</div>
+
+                Apostas Quina
+                <div class="bola" ng-repeat="q in s.apostasGanhadorasQuina"
+                     style="color:#fff; background-color:{{s.corConcurso}}">{{q}}</div>
+
+                Apostas Sena
+                <div class="bola" ng-repeat="q in s.apostasGanhadorasQuina"
+                     style="color:#fff; background-color:{{s.corConcurso}}">{{q}}</div>
             </div>
         </div>
     </div>

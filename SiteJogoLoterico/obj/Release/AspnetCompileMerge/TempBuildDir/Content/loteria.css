@@ -1,0 +1,167 @@
+element {
+    color: #fff;
+    background-color: #0b8043;
+}
+.jogo {
+    border: none !important;
+    border-radius: 50px;
+    border-color: #003576;
+    border: 2px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    font-family: sans-serif !important;
+    font-weight: bold;
+    font-size: 16px;
+    color: #003576;
+    background: #fff;
+    display: inline;
+    margin: 2.5px;
+    padding: 0px 0px 0px 0px;
+}
+
+.jogoHabilitado {
+    border: none !important;
+    border-radius: 50px;
+    border-color: #003576;
+    border: 2px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    font-family: sans-serif !important;
+    font-weight: bold;
+    font-size: 16px;
+    color: #f1e99e;
+    background: #000;
+    display: inline;
+    margin: 2.5px;
+    padding: 0px 0px 0px 0px;
+}
+
+input.desabilitado {
+    display: none;
+}
+
+
+input.desabilitado {
+    display: none;
+}
+.bola {
+    margin: 8px 8px 0 0;
+    letter-spacing: 2px;
+    padding: 0 0 0 2px;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    line-height: 44px;
+    border-radius: 50%;
+    vertical-align: central;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: arial,sans-serif-light,sans-serif;
+    font-weight: 300;
+    color: rgba(0,0,0,.87);
+}
+
+.bolaValor {
+    margin: 8px 8px 0 0;
+    letter-spacing: 2px;
+    padding: 0 0 0 2px;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    line-height: 44px;
+    border-radius: 50%;
+    vertical-align: central;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: arial,sans-serif-light,sans-serif;
+    font-weight: 300;
+    color: rgba(0,0,0,.87);
+}
+.cabecalhoSorteado {
+    color: #777;
+    font-size: 16px;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: 42px;
+    line-height: 42px;
+}
+.espacoCanto {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.tipoAposta {
+    color: #777;
+    font-size: 16px;
+    white-space: nowrap;
+}
+.tipoConcurso {
+    color: #222;
+    font-size: 16px;
+    white-space: nowrap;
+}
+.tabelaLoteria {
+    border-radius: 2px;
+    padding-top: 0;
+    clear: both;
+    line-height: 1.2;
+    font-size: small;
+    color: #222;
+}
+
+.fundo_bilhete {
+    background-color: #f1e99e;
+    padding-top: 7px !important;
+    padding-left: 5px;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+    margin-top: 10px;
+}
+.botaoAzul {
+    display: inline-block;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 1px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 2px;
+    border-color: #004162;
+    color: #fff;
+    background: rgb(5,140,224);
+    background: linear-gradient(to bottom, rgba(5,140,224,1) 0%,rgba(4,126,203,1) 100%);
+    height: 50px;
+    box-shadow: 0px 2px 0 rgba(31,42,71,.1);
+    text-transform: uppercase;
+    min-width: 100px;
+}
+

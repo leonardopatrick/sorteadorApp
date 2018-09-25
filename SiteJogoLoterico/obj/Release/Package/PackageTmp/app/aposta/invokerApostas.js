@@ -60,6 +60,15 @@
             });
         },
 
+        addSorteio: function (parametros) {
+
+            return $http({
+                method: 'POST', url: baseUrl + '/api/JogoLoterico/sorteiaNumeros',
+                data: parametros,
+                headers: { 'Content-Type': 'application/json;charset=utf-8' }
+            });
+        },
+
     };
 
 });

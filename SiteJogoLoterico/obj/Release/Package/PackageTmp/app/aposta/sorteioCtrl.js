@@ -6,7 +6,7 @@
             "qtdNumeros": 6
         };
 
-        invokerApostas.addSurpresinha(parametros).then(function successCallback(response) {
+        invokerApostas.addSorteio(parametros).then(function successCallback(response) {
 
          $scope.numerosSorteados = response.data;
 
